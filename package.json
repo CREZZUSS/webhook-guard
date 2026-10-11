@@ -1,0 +1,42 @@
+{
+  "name": "webhook-guard",
+  "version": "0.1.0",
+  "description": "Secure payment webhooks from FedaPay, PayDunya and NOWPayments: signature checks, replay protection, idempotence and an audit log.",
+  "type": "module",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "dist/src/index.d.ts",
+      "default": "dist/src/index.js"
+    }
+  },
+  "files": [
+    "dist/src"
+  ],
+  "engines": {
+    "node": ">=18.17"
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "test": "npm run build && node --test \"dist/test/**/*.test.js\"",
+    "demo": "npm run build && node dist/demo/attack.js"
+  },
+  "keywords": [
+    "webhook",
+    "security",
+    "fedapay",
+    "paydunya",
+    "nowpayments",
+    "mobile-money",
+    "hmac",
+    "replay-attack",
+    "idempotency"
+  ],
+  "author": "CREZZUSS",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.6.3"
+  }
+}
